@@ -1,0 +1,800 @@
+/* ==========================================
+   Vorex Team Official Website
+   Part 1
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+   Reset
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:#070707;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+/* =========================
+   Background
+========================= */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    background:
+    radial-gradient(circle at top left,#00ff8840,transparent 35%),
+    radial-gradient(circle at bottom right,#00ff5540,transparent 40%),
+    #070707;
+
+}
+
+/* =========================
+   Header
+========================= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:20px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:transparent;
+
+    transition:.35s;
+
+    z-index:1000;
+
+}
+
+.header-logo{
+
+    width:55px;
+
+    user-select:none;
+
+}
+
+/* =========================
+   Hamburger Button
+========================= */
+
+.menu-btn{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+.menu-btn span{
+
+    width:28px;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:#00ff88;
+
+    transition:.35s ease;
+
+}
+
+/* Hamburger Animation */
+
+.menu-btn.active span:nth-child(1){
+
+    transform:translateY(9px) rotate(45deg);
+
+}
+
+.menu-btn.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-btn.active span:nth-child(3){
+
+    transform:translateY(-9px) rotate(-45deg);
+
+}
+
+/* =========================
+   Sidebar
+========================= */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:-320px;
+
+    width:300px;
+
+    height:100vh;
+
+    background:#101010;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:35px;
+
+    transition:left .35s ease;
+
+    z-index:9999;
+
+}
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+.sidebar-logo{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.sidebar-logo img{
+
+    width:90px;
+
+    margin-bottom:15px;
+
+}
+
+.sidebar-logo h2{
+
+    font-size:28px;
+
+}
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.sidebar nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.sidebar nav a:hover{
+
+    color:#00ff88;
+
+    transform:translateX(8px);
+
+}
+
+/* =========================
+   Social
+========================= */
+
+.social{
+
+    margin-top:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.social a{
+
+    color:#00ff88;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    transform:translateX(8px);
+
+}
+
+.social span{
+
+    color:#888;
+
+}
+
+/* =========================
+   Overlay
+========================= */
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:9000;
+
+}
+
+.overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+/* ==========================================
+   Vorex Team Official Website
+   Part 2
+========================================== */
+
+/* =========================
+   Hero Section
+========================= */
+
+#home{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero-logo{
+
+    width:180px;
+
+    margin-bottom:30px;
+
+    animation:float 5s ease-in-out infinite;
+
+    filter:drop-shadow(0 0 20px rgba(0,255,136,.35));
+
+}
+
+#home h1{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+#home p{
+
+    max-width:700px;
+
+    color:#cfcfcf;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+.main-btn{
+
+    margin-top:40px;
+
+    display:inline-block;
+
+    padding:18px 40px;
+
+    border-radius:15px;
+
+    text-decoration:none;
+
+    background:#00ff88;
+
+    color:#000;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.main-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 30px #00ff88;
+
+}
+
+/* =========================
+   Sections
+========================= */
+
+section{
+
+    padding:120px 10%;
+
+}
+
+section h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+section p{
+
+    color:#d0d0d0;
+
+    line-height:1.8;
+
+}
+
+/* =========================
+   About
+========================= */
+
+#about{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+/* =========================
+   Games
+========================= */
+
+#games{
+
+    text-align:center;
+
+}
+
+.game-card{
+
+    max-width:700px;
+
+    margin:40px auto;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00ff88;
+
+    box-shadow:0 0 25px rgba(0,255,136,.15);
+
+}
+
+.game-card h3{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+.game-card p{
+
+    color:#cfcfcf;
+
+}
+
+/* =========================
+   Contact
+========================= */
+
+#contact{
+
+    text-align:center;
+
+}
+
+#contact a{
+
+    color:#00ff88;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+#contact a:hover{
+
+    text-decoration:underline;
+
+}
+/* ==========================================
+   Vorex Team Official Website
+   Part 3
+========================================== */
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+    padding:60px 30px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.02);
+
+}
+
+footer img{
+
+    width:80px;
+
+    margin-bottom:20px;
+
+    filter:drop-shadow(0 0 15px rgba(0,255,136,.35));
+
+}
+
+footer p{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+footer small{
+
+    color:#888;
+
+}
+
+/* =========================
+   Scroll Bar
+========================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0b0b0b;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00ff88;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00d46f;
+
+}
+
+/* =========================
+   Text Selection
+========================= */
+
+::selection{
+
+    background:#00ff88;
+
+    color:#000;
+
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================
+   Hover Effects
+========================= */
+
+a,
+button{
+
+    transition:.3s ease;
+
+}
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+.hero-logo:hover{
+
+    transform:scale(1.05);
+
+    transition:.3s;
+
+}
+
+.header-logo:hover{
+
+    transform:rotate(10deg);
+
+    transition:.3s;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:900px){
+
+    section{
+
+        padding:90px 30px;
+
+    }
+
+    #home h1{
+
+        font-size:52px;
+
+    }
+
+    #home p{
+
+        font-size:18px;
+
+    }
+
+    .hero-logo{
+
+        width:150px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        width:260px;
+
+        left:-260px;
+
+    }
+
+    .header-logo{
+
+        width:45px;
+
+    }
+
+    .menu-btn{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    section h2{
+
+        font-size:34px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    #home{
+
+        padding:25px;
+
+    }
+
+    #home h1{
+
+        font-size:40px;
+
+    }
+
+    #home p{
+
+        font-size:16px;
+
+    }
+
+    .hero-logo{
+
+        width:120px;
+
+    }
+
+    .main-btn{
+
+        width:100%;
+
+        max-width:260px;
+
+        text-align:center;
+
+    }
+
+    footer img{
+
+        width:65px;
+
+    }
+
+}
+
+/* =========================
+   End Of File
+========================= */
